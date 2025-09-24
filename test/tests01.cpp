@@ -16,7 +16,6 @@ TEST(test_03, slow_test)
     ASSERT_TRUE(height(2,1,10)==10);
 }
 
-
 TEST(test_03, fast_test)
 {
     ASSERT_TRUE(height(10,2,25)==4);

@@ -1,9 +1,19 @@
 #include "../include/height.h"
 
 int height(int UpSpeed,int DownSpeed,int desiredHeight){
-    int result = desiredHeight / (UpSpeed - DownSpeed);
-    if (desiredHeight % (UpSpeed - DownSpeed) > 0){
-        result += 1;
+    int result = 0;
+    int flag = 0;
+    while (result != desiredHeight){
+        if (flag % 2 == 0){
+            result += UpSpeed;
+        }
+        else {
+            result -= DownSpeed;
+        }
+        ++flag;
     }
-    return result;
+    if (flag % 2 != 0){
+        ++flag;
+    }
+    return flag / 2;
 }

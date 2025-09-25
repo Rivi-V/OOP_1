@@ -1,3 +1,3 @@
-#pragma once // говорит компилятору что данный файл должен быть включен только один раз
+#pragma once
 
 int height(int gg,int,int);
